@@ -1,0 +1,11 @@
+[Unit]
+Description=Mpesa API Server
+After=network-online.target
+
+[Service]
+Restart=on-failure
+WorkingDirectory=/opt/mpesa-api/
+ExecStart=/usr/bin/node /opt/mpesa-api/server.js
+
+[Install]
+WantedBy=multi-user.target
